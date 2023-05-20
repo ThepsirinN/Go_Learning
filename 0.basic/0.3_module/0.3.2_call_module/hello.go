@@ -10,14 +10,15 @@ import (
 func main() {
 	log.SetPrefix("greeting:")
 	log.SetFlags(11) //
-	message, err := greeting.Hello("")
+	// message, err := greeting.Hello("Barko")
+	names := []string{"barko", "bank", "boom", "bell", "eiei"}
+	message, err := greeting.Hellos(names)
 
 	if err != nil {
 		log.Fatal(err)
 		// auto return
 	}
 
+	// fmt.Println(message)
 	fmt.Println(message)
 }
-
-/* https://go.dev/doc/tutorial/call-module-code */
